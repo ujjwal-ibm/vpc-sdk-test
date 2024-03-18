@@ -22,7 +22,7 @@
     <dependency>
         <groupId>com.ibm.cloud</groupId>
         <artifactId>vpc</artifactId>
-        <version>0.17.1</version>
+        <version>0.18.0</version>
     </dependency>
     <dependency> 
         <groupId>org.slf4j</groupId>

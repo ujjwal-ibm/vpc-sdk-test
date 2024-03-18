@@ -137,20 +137,20 @@ public class App {
             SubnetIdentityById subnetIdentityModel = new SubnetIdentityById.Builder()
                     .id(subnet.getId())
                     .build();
-            NetworkInterfacePrototype networkInterfacePrototypeModel = new NetworkInterfacePrototype.Builder()
-                    .name("my-network-interface")
-                    .subnet(subnetIdentityModel)
+            InstanceNetworkAttachmentPrototype networkAttachmentPrototypeModel = new InstanceNetworkAttachmentPrototype.Builder()
+                    .name("my-network-attachment")
+                    .virtualNetworkInterface(new InstanceNetworkAttachmentPrototypeVirtualNetworkInterfaceVirtualNetworkInterfacePrototypeInstanceNetworkAttachmentContext.Builder().subnet(subnetIdentityModel).build())
                     .build();
             ZoneIdentityByName zoneIdentityModel = new ZoneIdentityByName.Builder()
                     .name(region + "-1")
                     .build();
-            InstancePrototypeInstanceByImage instancePrototypeModel = new InstancePrototypeInstanceByImage.Builder()
+            InstancePrototypeInstanceByImageInstanceByImageInstanceByNetworkAttachment instancePrototypeModel = new InstancePrototypeInstanceByImageInstanceByImageInstanceByNetworkAttachment.Builder()
                     .keys(new java.util.ArrayList<KeyIdentity>(java.util.Arrays.asList(keyIdentityModel)))
                     .name("my-instance")
                     .profile(instanceProfileIdentityModel)
                     .vpc(vpcIdentityModel)
                     .image(imageIdentityModel)
-                    .primaryNetworkInterface(networkInterfacePrototypeModel)
+                    .primaryNetworkAttachment(networkAttachmentPrototypeModel)
                     .zone(zoneIdentityModel)
                     .build();
             CreateInstanceOptions createInstanceOptions = new CreateInstanceOptions.Builder()
