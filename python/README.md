@@ -1,5 +1,5 @@
 # vpc-python-sdk
-test and sample code for vpc-go-sdk for ibm-cloud
+test and sample code for vpc-python-sdk for ibm-cloud
 
 To use the code in main.go, export your IAM api key in below format
 ```
